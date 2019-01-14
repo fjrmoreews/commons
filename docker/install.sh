@@ -5,6 +5,8 @@
 #fix hostname if necessary
 #echo "127.0.1.1 $HOSTNAME" > /etc/hosts
 
+usermod -aG docker ${USER}
+
 sudo apt-get update
 sudo apt-get install    -y  apt-transport-https     ca-certificates     curl     software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
