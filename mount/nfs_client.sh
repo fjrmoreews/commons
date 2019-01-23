@@ -33,6 +33,7 @@ function fstabmnt {
  #OPTFSTAB=",nfsvers=3"
  echo "$SPATH $SHAREDIR  nfs rw$OPTFSTAB 0 0" >>  /etc/fstab
  chmod  644  /etc/fstab
+ mount -a -vvvv
 }
 
 fstabmnt
